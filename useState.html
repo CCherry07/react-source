@@ -63,6 +63,7 @@
       if (hook.queue.pending) {
         // 头部的状态
         let firstUpdate = hook.queue.pending.next
+        // 获取多个update 状态更新
         do {
           const action = firstUpdate.action
           baseState = action(baseState)
